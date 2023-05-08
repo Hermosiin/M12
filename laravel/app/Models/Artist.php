@@ -11,5 +11,5 @@ class Artist extends Model
     use CrudTrait;
     use HasFactory;
 
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'filepath'];
 }

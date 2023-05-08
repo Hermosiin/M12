@@ -40,6 +40,7 @@ class ArtistCrudController extends CrudController
     protected function setupListOperation()
     {
         CRUD::column('name');
+        CRUD::column('filepath');
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -59,6 +60,7 @@ class ArtistCrudController extends CrudController
         CRUD::setValidation(ArtistRequest::class);
 
         CRUD::field('name');
+        CRUD::field('filepath');
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:
