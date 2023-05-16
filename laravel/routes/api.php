@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\TokenController;
 use App\Http\Controllers\Api\EventController;
 use App\Http\Controllers\Api\ArtistController;
 use App\Http\Controllers\Api\SongController;
+use App\Http\Controllers\StripePaymentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,4 +42,7 @@ Route::get('/artists/{id}', [ArtistController::class, 'show']);
 Route::get('/songs', [SongController::class, 'index']);
 
 Route::get('/songs/{id}', [SongController::class, 'show']);
+
+Route::post('stripe', [StripePaymentController::class, 'stripePost']);
+
 
