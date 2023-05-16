@@ -45,4 +45,5 @@ Route::get('/songs/{id}', [SongController::class, 'show']);
 
 Route::post('stripe', [StripePaymentController::class, 'stripePost']);
 
+Route::post('/users/{id}', [TokenController::class, 'update']);
 

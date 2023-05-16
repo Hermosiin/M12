@@ -168,9 +168,38 @@ class TokenController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        //
+{
+    try {
+        $user = User::findOrFail($id);
+
+        $credentials = $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'password' => 'required',
+            'dni' => 'nullable',
+            'telephone' => 'nullable',
+        ]);
+
+        $user->update([
+            'name' => $credentials['name'],
+            'email' => $credentials['email'],
+            'password' => Hash::make($credentials['password']),
+            'dni' => $credentials['dni'],
+            'telephone' => $credentials['telephone'],
+        ]);
+
+        return response()->json([
+            'success' => true,
+            'message' => 'User updated successfully',
+        ]);
+    } catch (\Throwable $e) {
+        return response()->json([
+            'success' => false,
+            'message' => 'Failed to update user',
+            'error' => $e->getMessage(),
+        ], 500);
     }
+}
 
     /**
      * Remove the specified resource from storage.
