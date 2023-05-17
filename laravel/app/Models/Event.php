@@ -10,7 +10,7 @@ class Event extends Model
 {
     use CrudTrait;
     protected $fillable = [
-        'name', 'description', 'filepath', 'start_date', 'end_date', 'artist_id', 'location', 'price', 'capacity'
+        'name', 'description', 'filepath', 'stripe', 'start_date', 'end_date', 'artist_id', 'location', 'price', 'capacity'
     ];
 
     public function artist()

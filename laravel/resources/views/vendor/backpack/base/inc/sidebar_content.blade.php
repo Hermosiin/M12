@@ -14,11 +14,13 @@
             <li class="nav-item"><a class="nav-link" href="{{ backpack_url('permission') }}"><i class="nav-icon la la-key"></i> <span>Permissions</span></a></li>
         </ul>
     </li>
+    <li class="nav-item"><a class="nav-link" href="{{ backpack_url('event') }}"><i class="nav-icon la la-question"></i> Events</a></li>
 
     <li class="nav-item"><a class="nav-link" href="{{ backpack_url('artist') }}"><i class="nav-icon la la-question"></i> Artists</a></li>
     <li class="nav-item"><a class="nav-link" href="{{ backpack_url('song') }}"><i class="nav-icon la la-question"></i> Songs</a></li>
-    <li class="nav-item"><a class="nav-link" href="{{ backpack_url('event') }}"><i class="nav-icon la la-question"></i> Events</a></li>
-
 @else
    {{ __("Only admins can see this section") }}
 @endhasanyrole
+
+
+

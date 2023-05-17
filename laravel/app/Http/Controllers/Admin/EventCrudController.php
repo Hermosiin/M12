@@ -42,6 +42,7 @@ class EventCrudController extends CrudController
         CRUD::column('name');
         CRUD::column('description');
         CRUD::column('filepath');
+        CRUD::column('stripe');
         CRUD::column('start_date');
         CRUD::column('end_date');
         CRUD::column('artist_id');
@@ -69,6 +70,7 @@ class EventCrudController extends CrudController
         CRUD::field('name');
         CRUD::field('description');
         CRUD::field('filepath');
+        CRUD::field('stripe');
         CRUD::field('start_date');
         CRUD::field('end_date');
         CRUD::field('artist_id');

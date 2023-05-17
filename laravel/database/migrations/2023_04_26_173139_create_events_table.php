@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('description');
             $table->string('filepath');
+            $table->string('stripe');
             $table->dateTime('start_date');
             $table->dateTime('end_date');
             $table->unsignedBigInteger('artist_id');
